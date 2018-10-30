@@ -22,7 +22,7 @@
 						<a href="<?=base_url()?>monitoring">Add New</a>
 					</li>
 					<li>
-						<a href="<?=base_url()?>monitoring/list">View Data</a>
+						<a href="<?=base_url()?>monitoring/listdata">View Data</a>
 					</li>
 				</ul>
 			</li>

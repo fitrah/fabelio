@@ -57,7 +57,7 @@ class Monitoring extends CI_Controller {
 		$this->template->display('monitoring/history', $data);
 	}
 	
-	public function list(){
+	public function listdata(){
 		$data['title'] = 'Product List';
 		
 		$this->template->display('monitoring/list', $data);
