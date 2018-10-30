@@ -4,7 +4,7 @@ Price Monitoring fo Fabelio.com
 # installing
 - clone/download all script
 - put into your web server document root
-- restore/export database from data.sql
+- restore/export database from fabelio.sql
 - edit database configuration on application/config/database.php
   change this line with your credentials
   'hostname' => 'localhost',
