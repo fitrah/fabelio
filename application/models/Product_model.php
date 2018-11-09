@@ -60,7 +60,7 @@ class Product_model extends CI_Model {
 		$totalFiltered= $this->db->query($sql)->num_rows();
 		
 		$query = $this->db->query($sql)->result_array();
-		echo $this->db->last_query();
+		
 		$data=array('total_data'=>$totalData,'total_filtered'=>$totalFiltered,'query'=>$query);
 		return $data;
 	}
