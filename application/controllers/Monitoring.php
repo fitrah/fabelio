@@ -144,4 +144,22 @@ class Monitoring extends CI_Controller {
 		echo json_encode($json_data);
 	}
 	
+	public function product_cron(){
+		$this->load->model('Product_model', 'product');
+		$this->load->helper('scrapper');
+		
+		$product = $this->product->get_list($_POST);
+		$i=0;
+		foreach ($product['query'] as $key=>$val){
+			$data = fabelio($val['product_url']);
+			$data['product_id'] = md5($val['product_url']);
+			$data['product_url'] = $val['product_url'];
+			if ($data['product_title']<>''&&$data['product_price']<>''){
+				$result = $this->product->add_product($data);
+				$i++;
+			}
+		}
+		echo $i." product updated";
+	}
+	
 }
